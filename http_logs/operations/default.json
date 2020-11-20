@@ -14,6 +14,22 @@
       "corpora": "http_logs"
     },
     {
+    "name": "index-append-with-ingest-geoip-pipeline",
+    "operation-type": "bulk",
+    "bulk-size": {{bulk_size | default(5000)}},
+    "ingest-percentage": {{ingest_percentage | default(100)}},
+    "pipeline": "geoip",
+    "corpora": "http_logs"
+    },
+    {
+    "name": "index-append-with-ingest-geoip2-pipeline",
+    "operation-type": "bulk",
+    "bulk-size": {{bulk_size | default(5000)}},
+    "ingest-percentage": {{ingest_percentage | default(100)}},
+    "pipeline": "geoip2",
+    "corpora": "http_logs"
+    },
+    {
       "name": "index-append-with-ingest-grok-pipeline",
       "operation-type": "bulk",
       "bulk-size": {{bulk_size | default(5000)}},
