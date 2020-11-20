@@ -232,4 +232,47 @@
           }
         ]
       }
+
+    },
+      {
+      "name": "create-http-log-geoip1-pipeline",
+      "operation-type": "put-pipeline",
+    "id": "http-log-geoip-pipeline",
+    "body": {
+    "description": "Enrich the data with the geo-ip filter. Requires --elasticsearch-plugins='ingest-geoip'",
+    "processors": [
+    {
+    "geoip": {
+    "field": "clientip",
+    "properties": [
+    "city_name",
+    "country_name",
+    "location"
+    ]
+    }
+    }
+    ]
+    }
+
+    },
+    {
+    "name": "create-http-log-geoip2-pipeline",
+    "operation-type": "put-pipeline",
+    "id": "http-log-geoip-pipeline",
+    "body": {
+    "description": "Enrich the data with the geo-ip filter. Requires --elasticsearch-plugins='ingest-geoip'",
+    "processors": [
+    {
+    "geoip": {
+    "field": "clientip",
+    "properties": [
+    "city_name",
+    "country_name",
+    "location"
+    ]
+    }
+    }
+    ]
+    }
+
     }
